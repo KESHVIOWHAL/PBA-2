@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Header & Nav */
+
+header {
+    background-color: #006494;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #ffdd57;
+}
+
+
+/* Sections */
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    display: none;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.visible {
+    display: block;
+}
+
+h2 {
+    color: #006494;
+    margin-bottom: 1rem;
+}
+
+input,
+select,
+button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #006494;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #004f6e;
+}
+
+#loginStatus,
+#bookingResult,
+#policyResult {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #006400;
+}
+
+
+/* Home */
+
+.home-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.animated {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.subtext {
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 0.5rem;
+}
+
+#clock {
+    font-size: 1rem;
+    color: #006494;
+    margin-top: 1rem;
+}
+
+
+/* Features */
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    background-color: #e8f0fe;
+    border-radius: 12px;
+    padding: 1.2rem;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* Chatbot */
+
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#chatbot button {
+    background-color: #006494;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+    color: white;
+    border: none;
+}
+
+#chatWindow {
+    display: none;
+    position: absolute;
+    bottom: 65px;
+    right: 0;
+    width: 280px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+}
+
+#chatWindow p {
+    margin: 0.5rem 0;
+}
+
+#chatInput {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+
+/* Animations */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.clickable {
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.clickable:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+#patientRegistration {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+}
+
+#patientRegistration h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#patientRegistration label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#patientRegistration input,
+#patientRegistration select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#patientRegistration button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#patientRegistration button:hover {
+    background-color: #45a049;
+}
+
+#registrationResult {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
